@@ -1,0 +1,7 @@
+[project]
+name = "localdrop"
+entry = "index.ts"
+
+[build]
+outdir = "dist"
+compile = false
