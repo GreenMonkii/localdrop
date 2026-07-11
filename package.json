@@ -5,9 +5,17 @@
   "private": true,
   "scripts": {
     "dev": "bun --watch src/server/index.ts",
-    "build:client": "bun build ./src/client/main.ts --outdir ./dist/public",
-    "build": "bun run build:client",
-    "build:compile": "bun build --compile ./src/server/index.ts --outdir ./dist"
+
+    "build:public": "bun build ./src/client/main.ts --outfile ./public/main.js --format esm",
+    "build:client": "bun build ./src/client/main.ts --outfile ./dist/public/main.js --format esm",
+    "build:compile": "bun build --compile ./src/server/index.ts --outfile ./dist/localdrop",
+
+    "build": "bun run build:public && bun run build:compile",
+    "build:all": "bun run build:client && bun run build:compile",
+
+    "start": "./dist/localdrop",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

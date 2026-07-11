@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <style>
+    .fg { stroke: #171717; }
+    @media (prefers-color-scheme: dark) {
+      .fg { stroke: #f0f0f0; }
+    }
+  </style>
+
+  <!-- Border frame -->
+  <rect
+    x="1.5" y="1.5" width="29" height="29"
+    rx="5"
+    class="fg"
+    stroke-width="1.5"
+    fill="none"
+  />
+
+  <!-- Upload arrow shaft -->
+  <line
+    x1="16" y1="22"
+    x2="16" y2="10"
+    class="fg"
+    stroke-width="2.25"
+    stroke-linecap="round"
+  />
+
+  <!-- Arrow head -->
+  <polyline
+    points="10.5,15.5 16,9.5 21.5,15.5"
+    class="fg"
+    stroke-width="2.25"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Base line -->
+  <line
+    x1="11" y1="23.5"
+    x2="21" y2="23.5"
+    class="fg"
+    stroke-width="2.25"
+    stroke-linecap="round"
+  />
+</svg>
